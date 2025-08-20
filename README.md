@@ -1,45 +1,42 @@
 # Python
 
-🔧 AWS Environment Variables Setup
-
+AWS Environment Variables Setup
+Overview
 To run this Python integration, you need to configure your AWS credentials as environment variables.
+Linux / macOS Setup
 
-Linux / macOS:
-
-Open your shell configuration file (e.g., ~/.bashrc or ~/.zshrc).
+Open your shell configuration file:
+bashnano ~/.bashrc    # For bash
+# OR
+nano ~/.zshrc     # For zsh
 
 Add the following lines at the bottom of the file:
-
-export AWS_ACCESS_KEY_ID="YOUR_ACCESS_KEY"
+bashexport AWS_ACCESS_KEY_ID="YOUR_ACCESS_KEY"
 export AWS_SECRET_ACCESS_KEY="YOUR_SECRET_KEY"
-
+export AWS_DEFAULT_REGION="us-east-1"  # Optional but recommended
 
 Save the file and reload it:
-
-source ~/.bashrc
-# or
+bashsource ~/.bashrc
+# OR
 source ~/.zshrc
 
-Windows
-PowerShell:
 
-Run the following commands (they will persist across sessions):
-
-setx AWS_ACCESS_KEY_ID "YOUR_ACCESS_KEY"
+Windows Setup
+PowerShell (Persistent across sessions)
+powershellsetx AWS_ACCESS_KEY_ID "YOUR_ACCESS_KEY"
 setx AWS_SECRET_ACCESS_KEY "YOUR_SECRET_KEY"
-
-Command Prompt (temporary, current session only)
-set AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
+setx AWS_DEFAULT_REGION "us-east-1"
+Command Prompt (Temporary, current session only)
+cmdset AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
 set AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
-
+set AWS_DEFAULT_REGION=us-east-1
 Verification
-
-You can verify that the variables are set correctly by running:
-
-echo $AWS_ACCESS_KEY_ID        # Linux/macOS
+Verify that the variables are set correctly:
+Linux/macOS
+bashecho $AWS_ACCESS_KEY_ID
 echo $AWS_SECRET_ACCESS_KEY
 echo $AWS_DEFAULT_REGION
-
-echo $env:AWS_ACCESS_KEY_ID    # Windows PowerShell
+Windows PowerShell
+powershellecho $env:AWS_ACCESS_KEY_ID
 echo $env:AWS_SECRET_ACCESS_KEY
 echo $env:AWS_DEFAULT_REGION
