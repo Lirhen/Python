@@ -11,6 +11,7 @@ Open your shell configuration file (e.g., ~/.bashrc or ~/.zshrc).
 Add the following lines at the bottom of the file:
 
 export AWS_ACCESS_KEY_ID="YOUR_ACCESS_KEY"
+
 export AWS_SECRET_ACCESS_KEY="YOUR_SECRET_KEY"
 
 Save the file and reload it:
@@ -25,10 +26,13 @@ PowerShell
 Run the following commands (they will persist across sessions):
 
 setx AWS_ACCESS_KEY_ID "YOUR_ACCESS_KEY"
+
 setx AWS_SECRET_ACCESS_KEY "YOUR_SECRET_KEY"
 
 Command Prompt (temporary, current session only)
+
 set AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
+
 set AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
 
 Verification
@@ -36,7 +40,9 @@ Verification
 You can verify that the variables are set correctly by running:
 
 echo $AWS_ACCESS_KEY_ID        # Linux/macOS
+
 echo $AWS_SECRET_ACCESS_KEY
 
 echo $env:AWS_ACCESS_KEY_ID    # Windows PowerShell
+
 echo $env:AWS_SECRET_ACCESS_KEY
