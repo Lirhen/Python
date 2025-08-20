@@ -14,6 +14,9 @@ export AWS_ACCESS_KEY_ID="YOUR_ACCESS_KEY"
 
 export AWS_SECRET_ACCESS_KEY="YOUR_SECRET_KEY"
 
+export AWS_DEFAULT_REGION="us-east-1"
+
+
 Save the file and reload it:
 
 source ~/.bashrc
@@ -29,11 +32,15 @@ setx AWS_ACCESS_KEY_ID "YOUR_ACCESS_KEY"
 
 setx AWS_SECRET_ACCESS_KEY "YOUR_SECRET_KEY"
 
+setx AWS_DEFAULT_REGION "us-east-1"
+
 Command Prompt (temporary, current session only)
 
 set AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
 
 set AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
+
+set AWS_DEFAULT_REGION=us-east-1
 
 Verification
 
@@ -43,6 +50,11 @@ echo $AWS_ACCESS_KEY_ID        # Linux/macOS
 
 echo $AWS_SECRET_ACCESS_KEY
 
+echo $AWS_DEFAULT_REGION
+
 echo $env:AWS_ACCESS_KEY_ID    # Windows PowerShell
 
+echo $env:AWS_SECRET_ACCESS_KEY
+
+echo $env:AWS_DEFAULT_REGION
 echo $env:AWS_SECRET_ACCESS_KEY
