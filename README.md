@@ -42,6 +42,25 @@ set AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
 
 set AWS_DEFAULT_REGION=us-east-1
 
+
+
+If you are in PowerShell terminal (inside PyCharm or standalone):
+
+$env:AWS_ACCESS_KEY_ID = "YOUR_ACCESS_KEY"
+
+$env:AWS_SECRET_ACCESS_KEY = "YOUR_SECRET_KEY"
+
+$env:AWS_DEFAULT_REGION = "us-east-1"
+
+
+Check that they are set:
+
+echo $env:AWS_ACCESS_KEY_ID
+
+echo $env:AWS_SECRET_ACCESS_KEY
+
+echo $env:AWS_DEFAULT_REGION
+
 Verification
 
 You can verify that the variables are set correctly by running:
